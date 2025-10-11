@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import coinImage from "@/assets/insightsmatrix-coin.png";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -47,18 +48,17 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Coin image placeholder */}
+          {/* Right side - Coin image */}
           <div className="relative flex items-center justify-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative w-full max-w-lg aspect-square">
-              {/* Add your coin image here */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/20 rounded-full blur-3xl animate-glow-pulse" />
-              <div className="relative w-full h-full flex items-center justify-center">
-                <div className="w-4/5 h-4/5 border-2 border-primary/30 rounded-full flex items-center justify-center animate-float">
-                  <span className="font-orbitron text-6xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    IMC
-                  </span>
-                </div>
-              </div>
+            <div className="relative w-full max-w-lg">
+              {/* Glow effect behind coin */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/30 to-primary/30 rounded-full blur-3xl animate-glow-pulse" />
+              {/* Coin image */}
+              <img 
+                src={coinImage} 
+                alt="InsightsMatrix Coin" 
+                className="relative w-full h-auto animate-float drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
