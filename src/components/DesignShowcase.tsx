@@ -2,7 +2,7 @@ import { Hexagon } from 'lucide-react';
 
 export const DesignShowcase = () => {
   return (
-    <section className="relative py-24 px-6 bg-gradient-to-b from-background to-space-deep">
+    <section id="design" className="relative py-24 px-6 bg-gradient-to-b from-background to-space-deep">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 text-center">
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">

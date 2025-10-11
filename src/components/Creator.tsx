@@ -2,7 +2,7 @@ import { User } from 'lucide-react';
 
 export const Creator = () => {
   return (
-    <section className="relative py-24 px-6 bg-gradient-to-b from-background to-space-deep">
+    <section id="creator" className="relative py-24 px-6 bg-gradient-to-b from-background to-space-deep">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 text-center">
           <span className="text-foreground">About the</span>{' '}

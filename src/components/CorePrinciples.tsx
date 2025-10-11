@@ -25,7 +25,7 @@ const principles = [
 
 export const CorePrinciples = () => {
   return (
-    <section className="relative py-24 px-6">
+    <section id="principles" className="relative py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 text-center">
           <span className="text-foreground">Core</span>{' '}

@@ -1,4 +1,5 @@
 import { MatrixBackground } from "@/components/MatrixBackground";
+import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Vision } from "@/components/Vision";
 import { CorePrinciples } from "@/components/CorePrinciples";
@@ -12,6 +13,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       <MatrixBackground />
+      <Navigation />
       
       <main className="relative z-10">
         <Hero />

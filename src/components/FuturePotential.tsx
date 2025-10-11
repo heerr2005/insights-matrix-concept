@@ -20,7 +20,7 @@ const potentials = [
 
 export const FuturePotential = () => {
   return (
-    <section className="relative py-24 px-6">
+    <section id="future" className="relative py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 text-center">
           <span className="text-foreground">Future</span>{' '}
