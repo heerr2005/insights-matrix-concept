@@ -1,4 +1,4 @@
-import { User } from 'lucide-react';
+import creatorPhoto from '@/assets/creator-photo.jpeg';
 
 export const Creator = () => {
   return (
@@ -13,8 +13,12 @@ export const Creator = () => {
         
         <div className="mt-16 bg-card border border-border rounded-2xl p-8 md:p-12 shadow-card backdrop-blur-sm">
           <div className="flex flex-col items-center text-center">
-            <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mb-8">
-              <User className="w-16 h-16 text-primary" />
+            <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mb-8 overflow-hidden p-1">
+              <img 
+                src={creatorPhoto} 
+                alt="Creator" 
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
             
             <h3 className="font-orbitron font-bold text-2xl mb-6 text-foreground">
