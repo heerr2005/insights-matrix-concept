@@ -1,15 +1,15 @@
 export const Vision = () => {
   return (
-    <section id="vision" className="relative py-24 px-6">
+    <section id="vision" className="relative py-16 md:py-24 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-card backdrop-blur-sm">
-          <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6 text-center">
+        <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12 shadow-card backdrop-blur-sm">
+          <h2 className="font-orbitron font-bold text-3xl sm:text-4xl md:text-5xl mb-4 md:mb-6 text-center">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               A Creative Concept
             </span>
           </h2>
           
-          <div className="space-y-6 font-inter text-lg text-muted-foreground leading-relaxed">
+          <div className="space-y-4 md:space-y-6 font-inter text-base sm:text-lg text-muted-foreground leading-relaxed">
             <p>
               <span className="text-foreground font-semibold">InsightsMatrix Coin</span> represents a creative exploration into the future of value itself—a conceptual journey imagining what happens when artificial intelligence, data insights, and human wisdom converge into a measurable form of digital worth.
             </p>

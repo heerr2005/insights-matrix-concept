@@ -20,37 +20,37 @@ const potentials = [
 
 export const FuturePotential = () => {
   return (
-    <section id="future" className="relative py-24 px-6">
+    <section id="future" className="relative py-16 md:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 text-center">
+        <h2 className="font-orbitron font-bold text-3xl sm:text-4xl md:text-5xl mb-3 md:mb-4 text-center">
           <span className="text-foreground">Future</span>{' '}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Potential
           </span>
         </h2>
         
-        <p className="font-inter text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+        <p className="font-inter text-base sm:text-lg md:text-xl text-muted-foreground text-center mb-10 md:mb-16 max-w-3xl mx-auto">
           Where this conceptual framework could evolve
         </p>
 
-        <div className="space-y-6 mb-16">
+        <div className="space-y-4 sm:space-y-6 mb-10 md:mb-16">
           {potentials.map((potential, index) => {
             const Icon = potential.icon;
             return (
               <div
                 key={potential.title}
-                className="flex gap-6 items-start bg-card border border-border rounded-xl p-8 shadow-card backdrop-blur-sm hover:border-primary/50 transition-all duration-500 animate-fade-in"
+                className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start bg-card border border-border rounded-xl p-6 sm:p-8 shadow-card backdrop-blur-sm hover:border-primary/50 transition-all duration-500 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-7 h-7 text-primary" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                 </div>
                 
                 <div>
-                  <h3 className="font-orbitron font-bold text-xl mb-3 text-foreground">
+                  <h3 className="font-orbitron font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-foreground">
                     {potential.title}
                   </h3>
-                  <p className="font-inter text-muted-foreground leading-relaxed">
+                  <p className="font-inter text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {potential.description}
                   </p>
                 </div>
@@ -59,8 +59,8 @@ export const FuturePotential = () => {
           })}
         </div>
 
-        <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border border-primary/30 rounded-xl p-8 text-center">
-          <p className="font-inter text-lg text-foreground leading-relaxed">
+        <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border border-primary/30 rounded-xl p-6 sm:p-8 text-center">
+          <p className="font-inter text-base sm:text-lg text-foreground leading-relaxed">
             This project could evolve into a{' '}
             <span className="text-primary font-semibold">living ecosystem</span>—a platform where researchers, creators, and organizations collaborate to build the infrastructure for intelligent value exchange. From concept to reality, one insight at a time.
           </p>

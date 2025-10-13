@@ -21,20 +21,20 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-6">
+    <section id="contact" className="relative py-16 md:py-24 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 text-center">
+        <h2 className="font-orbitron font-bold text-3xl sm:text-4xl md:text-5xl mb-3 md:mb-4 text-center">
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Connect
           </span>{' '}
           <span className="text-foreground">& Collaborate</span>
         </h2>
         
-        <p className="font-inter text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+        <p className="font-inter text-base sm:text-lg md:text-xl text-muted-foreground text-center mb-10 md:mb-16 max-w-2xl mx-auto">
           Interested in discussing creative concepts, collaborating on visionary projects, or exploring new ideas together?
         </p>
 
-        <div className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-card backdrop-blur-sm">
+        <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12 shadow-card backdrop-blur-sm">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="font-inter text-sm font-semibold text-foreground mb-2 block">
