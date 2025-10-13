@@ -36,23 +36,23 @@ export const Navigation = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-orbitron font-black text-xl md:text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform"
+            className="font-orbitron font-black text-base sm:text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
             InsightsMatrix Coin
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-inter text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group"
+                className="font-inter text-sm xl:text-base font-medium text-muted-foreground hover:text-primary transition-colors relative group whitespace-nowrap"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -60,10 +60,10 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile/Tablet Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -74,9 +74,9 @@ export const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile/Tablet Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
             <div className="flex flex-col gap-4">
               {menuItems.map((item) => (
                 <button
