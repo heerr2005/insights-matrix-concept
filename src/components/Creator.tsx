@@ -21,6 +21,10 @@ export const Creator = () => {
               />
             </div>
             
+            <p className="font-orbitron font-semibold text-sm tracking-wider text-primary mb-4">
+              FOUNDER AND CEO OF INSIGHTSMATRIX
+            </p>
+            
             <h3 className="font-orbitron font-bold text-2xl mb-6 text-foreground">
               Visionary Designer & Conceptual Thinker
             </h3>
