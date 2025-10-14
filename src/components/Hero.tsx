@@ -12,7 +12,7 @@ export const Hero = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
-          <div className="relative text-left">
+          <div className="relative text-center lg:text-left">
             {/* Glow effects behind text */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[400px] lg:w-[500px] h-[250px] sm:h-[400px] lg:h-[500px] bg-primary/20 rounded-full blur-[80px] sm:blur-[120px] animate-glow-pulse" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] lg:w-[400px] h-[200px] sm:h-[300px] lg:h-[400px] bg-secondary/20 rounded-full blur-[60px] sm:blur-[100px] animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
@@ -28,7 +28,7 @@ export const Hero = () => {
               A conceptual vision by a creator exploring the fusion of AI, insight, and digital value.
             </p>
             
-            <div className="relative flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="relative flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <Button 
                 size="lg" 
                 className="font-orbitron text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow transition-all hover:scale-105"
