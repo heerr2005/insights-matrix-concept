@@ -1,6 +1,26 @@
-import { Hexagon } from 'lucide-react';
+import coinShowcase1 from '@/assets/coin-showcase-1.png';
+import coinFrontside from '@/assets/coin-frontside.png';
+import coinBackside from '@/assets/coin-backside.png';
 
 export const DesignShowcase = () => {
+  const showcaseItems = [
+    {
+      image: coinShowcase1,
+      title: "Interactive Environment",
+      description: "Immersive data visualization"
+    },
+    {
+      image: coinFrontside,
+      title: "Front Design",
+      description: "InsightsMatrix identity"
+    },
+    {
+      image: coinBackside,
+      title: "Back Design",
+      description: "Geometric precision"
+    }
+  ];
+
   return (
     <section id="design" className="relative py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-background to-space-deep">
       <div className="max-w-7xl mx-auto">
@@ -16,31 +36,28 @@ export const DesignShowcase = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {[1, 2, 3].map((item, index) => (
+          {showcaseItems.map((item, index) => (
             <div
-              key={item}
+              key={index}
               className="relative aspect-square rounded-xl overflow-hidden border border-border shadow-card group animate-fade-in"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-card to-secondary/10 group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
               
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  <Hexagon className="w-32 h-32 text-primary/30 animate-float" style={{ animationDelay: `${item * 0.5}s` }} />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-orbitron text-4xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
-                      {item}
-                    </span>
-                  </div>
-                </div>
+              <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-card to-transparent">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-background/95 via-background/80 to-transparent">
                 <h3 className="font-orbitron font-bold text-lg sm:text-xl text-foreground mb-1 sm:mb-2">
-                  Concept Visual {item}
+                  {item.title}
                 </h3>
                 <p className="font-inter text-xs sm:text-sm text-muted-foreground">
-                  Architectural exploration
+                  {item.description}
                 </p>
               </div>
             </div>
