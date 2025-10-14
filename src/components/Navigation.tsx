@@ -31,8 +31,8 @@ export const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-lg'
+        isScrolled || isMobileMenuOpen
+          ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -76,13 +76,13 @@ export const Navigation = () => {
 
         {/* Mobile/Tablet Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in bg-background/50 backdrop-blur-sm rounded-lg">
+            <div className="flex flex-col gap-3 px-2">
               {menuItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="font-inter text-base font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="font-inter text-base font-medium text-muted-foreground hover:text-primary transition-colors text-left py-2 px-3 rounded hover:bg-primary/10"
                 >
                   {item.label}
                 </button>
