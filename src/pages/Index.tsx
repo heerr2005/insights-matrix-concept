@@ -15,7 +15,7 @@ const Index = () => {
       <MatrixBackground />
       <Navigation />
       
-      <main className="relative z-10">
+      <main className="relative z-10" id="main-content" role="main">
         <Hero />
         <Vision />
         <CorePrinciples />

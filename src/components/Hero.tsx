@@ -8,7 +8,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-24 lg:pt-0">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-24 lg:pt-0" aria-label="Hero section">
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
