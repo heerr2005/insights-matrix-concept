@@ -7,17 +7,20 @@ export const DesignShowcase = () => {
     {
       image: coinShowcase1,
       title: "Interactive Environment",
-      description: "Immersive data visualization"
+      description: "Immersive data visualization",
+      alt: "InsightsMatrix Coin in interactive 3D environment with matrix-style data visualization and digital particles"
     },
     {
       image: coinFrontside,
       title: "Front Design",
-      description: "InsightsMatrix identity"
+      description: "InsightsMatrix identity",
+      alt: "Front face of InsightsMatrix Coin showing brand logo, geometric patterns, and AI-powered value system design"
     },
     {
       image: coinBackside,
       title: "Back Design",
-      description: "Geometric precision"
+      description: "Geometric precision",
+      alt: "Back face of InsightsMatrix Coin featuring intricate geometric patterns and precision engineering details"
     }
   ];
 
@@ -47,8 +50,9 @@ export const DesignShowcase = () => {
               <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
                 <img 
                   src={item.image} 
-                  alt={item.title}
+                  alt={item.alt}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
               </div>
 

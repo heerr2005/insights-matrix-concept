@@ -53,8 +53,9 @@ export const Hero = () => {
               {/* Coin image - clean background */}
               <img 
                 src={coinImage} 
-                alt="InsightsMatrix Coin" 
+                alt="InsightsMatrix Coin - 3D rendered digital cryptocurrency coin featuring geometric patterns and AI-powered intelligent value system branding" 
                 className="relative w-full h-auto animate-float"
+                loading="lazy"
               />
             </div>
           </div>
