@@ -29,13 +29,8 @@ export const Contact = () => {
       const encodedMessage = encodeURIComponent(whatsappMessage);
       const whatsappUrl = `https://wa.me/917862899167?text=${encodedMessage}`;
       
-      window.open(whatsappUrl, '_blank');
-      
-      toast.success("Opening WhatsApp...", {
-        description: "Your message is ready to send!"
-      });
-      
-      setFormData({ name: '', email: '', message: '' });
+      // Use location.href for better compatibility and to avoid popup blockers
+      window.location.href = whatsappUrl;
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast.error("Validation Error", {
