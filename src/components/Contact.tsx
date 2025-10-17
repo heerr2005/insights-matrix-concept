@@ -27,7 +27,7 @@ export const Contact = () => {
       
       const whatsappMessage = `Hi! My name is ${validatedData.name}.\n\nEmail: ${validatedData.email}\n\nMessage: ${validatedData.message}`;
       const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/917862899167?text=${encodedMessage}`;
       
       window.open(whatsappUrl, '_blank');
       
