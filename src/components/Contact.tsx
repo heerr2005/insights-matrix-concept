@@ -4,6 +4,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters")
+});
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,10 +21,28 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.", {
-      description: "Thank you for your interest in collaborating."
-    });
-    setFormData({ name: '', email: '', message: '' });
+    
+    try {
+      const validatedData = contactSchema.parse(formData);
+      
+      const whatsappMessage = `Hi! My name is ${validatedData.name}.\n\nEmail: ${validatedData.email}\n\nMessage: ${validatedData.message}`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+      
+      toast.success("Opening WhatsApp...", {
+        description: "Your message is ready to send!"
+      });
+      
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast.error("Validation Error", {
+          description: error.issues[0].message
+        });
+      }
+    }
   };
 
   return (
@@ -83,8 +108,8 @@ export const Contact = () => {
               size="lg"
               className="w-full font-orbitron text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow transition-all hover:scale-105"
             >
-              <Mail className="mr-2 h-5 w-5" />
-              Send Message
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Send via WhatsApp
             </Button>
           </form>
 
