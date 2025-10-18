@@ -13,9 +13,13 @@ export const MatrixBackground = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const columns = Math.floor(canvas.width / 20);
+    // Optimize for mobile: fewer columns and slower animation
+    const isMobile = window.innerWidth < 768;
+    const columnSpacing = isMobile ? 30 : 20;
+    const columns = Math.floor(canvas.width / columnSpacing);
     const drops: number[] = Array(columns).fill(1);
     const chars = '01';
+    const animationSpeed = isMobile ? 80 : 50; // Slower on mobile
 
     const draw = () => {
       ctx.fillStyle = 'rgba(7, 13, 20, 0.05)';
@@ -26,7 +30,7 @@ export const MatrixBackground = () => {
 
       for (let i = 0; i < drops.length; i++) {
         const text = chars[Math.floor(Math.random() * chars.length)];
-        ctx.fillText(text, i * 20, drops[i] * 20);
+        ctx.fillText(text, i * columnSpacing, drops[i] * 20);
 
         if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
@@ -35,7 +39,7 @@ export const MatrixBackground = () => {
       }
     };
 
-    const interval = setInterval(draw, 50);
+    const interval = setInterval(draw, animationSpeed);
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
